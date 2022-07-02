@@ -1,0 +1,32 @@
+{
+  "name": "projetofinalnodecadastro",
+  "version": "0.0.0",
+  "private": true,
+
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "jade": "~1.11.0",
+    "morgan": "^1.10.0",
+    "node-sass-middleware": "^1.0.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.18"
+  },
+  "rules": {
+    "no-console":"off"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "eslint --fix test/**",
+    "test": "jest --verbose=true",
+    "testing":"jest --watch --verbose=true"
+  }
+
+
+}
