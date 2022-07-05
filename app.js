@@ -1,11 +1,11 @@
 //Importacção commonJS modules (Firebase)
 require('dotenv').config();
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const firebase = require('./firebase');
 
 //Porta 
@@ -14,6 +14,7 @@ const port = 3000;
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+//Criando aplicação WEB express
 const app = express();
 
 // Diretório padrao de views na raiz da aplicação
@@ -25,10 +26,12 @@ app.listen(port, () => {
   console.log('Servidor rodando na porta '+ port);
 });
 
+//Rotas (End Points)
 app.get('/', (req,res) => {
   res.render('index.pug');
 });
 
+//usando
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
