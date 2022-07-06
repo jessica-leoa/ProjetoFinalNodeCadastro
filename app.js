@@ -6,10 +6,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const firebase = require('./firebase');
+const firebase = require('./services/firebase');
 
-//Porta 
-const port = 3000;
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -22,13 +20,14 @@ app.set('views', path.join(__dirname, 'views'));
 // Template engine a ser utilizado pelo Express
 app.set('view engine', 'pug');
 
-app.listen(port, () => {
-  console.log('Servidor rodando na porta '+ port);
-});
 
 //Rotas (End Points)
 app.get('/', (req,res) => {
   res.render('index.pug');
+});
+
+app.post('/', (req,res) => {
+
 });
 
 //usando

@@ -1,7 +1,8 @@
 //Importação CommonJS modules - Firebase SDKs
 const firebase = require('firebase/compat/app');
 
-require('firebase/compat/auth')
+require('firebase/compat/auth');
+require('firebase/compat/firestore');
 
 //configuração do Firebase
 const firebaseConfig = {
